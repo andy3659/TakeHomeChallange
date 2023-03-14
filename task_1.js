@@ -4,7 +4,6 @@ const findLongestWords = (input) => {
   let longestWord = "";
   let vowel = -1;
   const arr = input.replace(/[^a-z\s]/gi, "").split(" ");
-  console.log(arr);
   arr.forEach((e) => {
     if (e.length > longestWord.length) {
       longestWord = e;
