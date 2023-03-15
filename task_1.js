@@ -7,9 +7,9 @@ const findLongestWords = (input) => {
   arr.forEach((e) => {
     if (e.length > longestWord.length) {
       longestWord = e;
-      vowel = longestWord.match(/[aeiouAEIOU]/g).length || 0;
+      vowel = longestWord.match(/[aeiouAEIOU]/g)?.length || 0;
     } else if (e.length == longestWord.length) {
-      const eVowel = e.match(/[aeiouAEIOU]/g).length;
+      const eVowel = e.match(/[aeiouAEIOU]/g)?.length||0;
       if (eVowel > vowel) {
         vowel = eVowel;
         longestWord = e;
